@@ -3,8 +3,8 @@ class PagerdutyOncallAck < Formula
 
   desc "Acknowledge PagerDuty incidents only while the configured user is on call"
   homepage "https://nithishduda-ai.github.io/pagerduty-oncall-ack/"
-  url "https://files.pythonhosted.org/packages/2e/55/b75a819f51433683d12b6fcc1d065ee010dfa747d94e166adc6559a2a76b/pagerduty_oncall_ack-0.5.0.tar.gz"
-  sha256 "febf0f59f0f9df75ee5ae1086e9aaccec84ad0037e348436381d9570c5d2f74f"
+  url "https://files.pythonhosted.org/packages/dc/57/97acbf557fbe6b371663db63111fe65bc7929942d348d35b117d5276f9a8/pagerduty_oncall_ack-0.6.0.tar.gz"
+  sha256 "5b3b8fcdb975feefde64efeaa12e939443dcdbdbb5a6d96588182fa24575f3c1"
   license "MIT"
 
   depends_on "python@3.14"
@@ -61,7 +61,7 @@ class PagerdutyOncallAck < Formula
   end
 
   test do
-    assert_match "pd-auto-ack 0.5.0", shell_output("#{bin}/pd-auto-ack --version")
+    assert_match "pd-auto-ack 0.6.0", shell_output("#{bin}/pd-auto-ack --version")
     assert_match "Open a k9s-style terminal dashboard", shell_output("#{bin}/pd-auto-ack tui --help")
   end
 end
